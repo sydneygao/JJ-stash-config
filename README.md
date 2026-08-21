@@ -34,24 +34,24 @@
 
 **原始链接：**
 ```text
-stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml
+stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-stash-config.yaml
 ```
 
 **国内加速🚀：**
 ```text
-stash://install-config?url=https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml
+stash://install-config?url=https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-stash-config.yaml
 ```
 
 2. **方法二：在Stash app中选择「从URL下载」填写以下链接：**
 
  **原始链接：**
 ```text
-https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml
+https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-stash-config.yaml
 ```
 
  **国内加速🚀：** 
  ```text
-https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml
+https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-stash-config.yaml
 ```
 
 ## 📁 配置文件说明
@@ -123,7 +123,7 @@ https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml
 
 本配置文件使用 `proxy-providers` 从远程订阅地址自动获取代理节点。你需要将自己的订阅链接填入配置文件中。
 
-1. **方法一：打开Stash app，点击已导入的配置文件「JJ-config」，选择「编辑」。**
+1. **方法一：打开Stash app，点击已导入的配置文件「JJ-stash-config」，选择「编辑」。**
 
 找到 `JJ-config.yaml` 中的 `proxy-providers` 部分，将 `url` 字段的值替换为你的机场订阅链接：
 
@@ -139,7 +139,7 @@ proxy-providers:
       interval: 300
 ```
 
-2. **✅ 推荐 方法二：打开Stash app，点击已导入的配置文件「JJ-config」，选择「可视化编辑器」**
+2. **✅ 推荐 方法二：打开Stash app，点击已导入的配置文件「JJ-stash-config」，选择「可视化编辑器」**
 
 在「可视化编辑器」➡️「代理」➡️「远程代理集」➡️「Airport1」中填写机场订阅地址。
 
@@ -191,23 +191,23 @@ Method 1: ***Open the following link directly in Safari:***
 
 **Original Link:**
 ```text
-stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml
+stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-stash-config.yaml
 ```
 **China Acceleration 🚀:**
 ```text
-stash://install-config?url=https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml
+stash://install-config?url=https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-stash-config.yaml
 ```
 
 Method 2: ***In the Stash app, select 「Download from URL」 and enter the following address:***
 
 **Original Link:**
 ```text
-https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml
+https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-stash-config.yaml
 ```
 
 **China Acceleration 🚀:**
 ```text
-https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml
+https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-stash-config.yaml
 ```
 
 ## 📁 Configuration Structure
@@ -275,7 +275,7 @@ This project references the following external rule-sets via `rule-providers`:
 
 This configuration uses `proxy-providers` to automatically fetch proxy nodes from a remote subscription URL. You need to fill in your actual subscription link in the configuration file.
 
-***In the Stash app, tap the imported configuration file 「JJ-config」 and select 「Visual Editor」.***
+***In the Stash app, tap the imported configuration file 「JJ-stash-config」 and select 「Visual Editor」.***
 
 In 「Visual Editor」 ➡️ 「Proxy」 ➡️ 「Remote Proxy Set」 ➡️ 「Airport1」, enter your subscription URL.
 
