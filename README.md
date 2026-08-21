@@ -32,7 +32,7 @@
 
 你也可以直接在 Safari 中打开以下链接快速导入：
 
-<stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/jj-config.yaml>
+<stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
 
 ## 📁 配置文件说明
 
@@ -162,7 +162,7 @@ proxy-providers:
 
 You can also quickly import by opening the following link in Safari:
 
-- 「Download from URL」: `stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/jj-config.yaml`
+- 「Download from URL」: <stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
 
 ## 📁 Configuration Structure
 
