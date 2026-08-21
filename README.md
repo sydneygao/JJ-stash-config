@@ -30,17 +30,29 @@
 
 ### 通过 URL 一键导入
 
-1. 你也可以直接在 Safari 中打开以下链接快速导入：
+1. **推荐 ✅ 方法一：直接在 Safar 浏览器中打开以下链接快速导入：**
 
-<stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
+**原始链接：**
+```text
+stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml
+```
 
-国内加速：<stash://install-config?url=https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml>
+**国内加速🚀：**
+```text
+stash://install-config?url=https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml
+```
 
-2. 或在Stash app中选择「从URL下载」导入配置:
+2. **方法二：在Stash app中选择「从URL下载」填写以下链接：**
 
- <https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
+ **原始链接：**
+```text
+https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml
+```
 
- 国内加速：<https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml>
+ **国内加速🚀：** 
+ ```text
+https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml
+```
 
 ## 📁 配置文件说明
 
@@ -70,7 +82,7 @@
 | `private_domain` | `domain` | 私有域名（内网、本地等） |
 | `ai` | `domain` | AI 服务（如 ChatGPT、Claude 等） |
 | `youtube_domain` | `domain` | YouTube 视频平台 |
-| `google_domain` | `domain` | Google 旗下服务（搜索、Gmail、Drive 等） |
+| `google_domain` | `domain` | Google 旗下服务（Youtube、Gmail、Drive 等） |
 | `github_domain` | `domain` | GitHub 代码托管平台 |
 | `spotify_domain` | `domain` | Spotify 音乐流媒体 |
 | `telegram_domain` | `domain` | Telegram 即时通讯 |
@@ -107,9 +119,11 @@
 - 支持后台静默更新，无需重载 Stash
 - `domain` 和 `ipcidr` 类型匹配性能优秀，内存占用低
 
-## 🔧 自定义机场版使用
+## 🔧 自定义机场订阅地址
 
-本配置文件使用 `proxy-providers` 从远程订阅地址自动获取代理节点。你需要将真实的订阅链接填入配置文件中。
+本配置文件使用 `proxy-providers` 从远程订阅地址自动获取代理节点。你需要将自己的订阅链接填入配置文件中。
+
+1. **方法一：打开Stash app，点击已导入的配置文件「JJ-config」，选择「编辑」。**
 
 找到 `JJ-config.yaml` 中的 `proxy-providers` 部分，将 `url` 字段的值替换为你的机场订阅链接：
 
@@ -124,6 +138,11 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
 ```
+
+2. **✅ 推荐 方法二：打开Stash app，点击已导入的配置文件「JJ-config」，选择「可视化编辑器」**
+
+在「可视化编辑器」➡️「代理」➡️「远程代理集」➡️「Airport1」中填写机场订阅地址。
+
 ## 📄 许可证
 
 本项目采用 [MIT License](LICENSE) 开源协议。你可以自由使用、修改、分发本配置，但需保留原作者的版权声明。
@@ -168,13 +187,28 @@ proxy-providers:
 
 ### One-Click Import via URL
 
-You can also quickly import the configuration by opening the following link directly in Safari:
+Method 1: ***Open the following link directly in Safari:***
 
-<stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
+**Original Link:**
+```text
+stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml
+```
+**China Acceleration 🚀:**
+```text
+stash://install-config?url=https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml
+```
 
-Alternatively, you can import the configuration in the Stash app by selecting **「Download from URL」** and entering the following address:
+Method 2: ***In the Stash app, select 「Download from URL」 and enter the following address:***
 
-<https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
+**Original Link:**
+```text
+https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml
+```
+
+**China Acceleration 🚀:**
+```text
+https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml
+```
 
 ## 📁 Configuration Structure
 
@@ -241,7 +275,9 @@ This project references the following external rule-sets via `rule-providers`:
 
 This configuration uses `proxy-providers` to automatically fetch proxy nodes from a remote subscription URL. You need to fill in your actual subscription link in the configuration file.
 
-Locate the `proxy-providers` section in `jj-config.yaml` and replace the `url` field value with your subscription address:
+***In the Stash app, tap the imported configuration file 「JJ-config」 and select 「Visual Editor」.***
+
+In 「Visual Editor」 ➡️ 「Proxy」 ➡️ 「Remote Proxy Set」 ➡️ 「Airport1」, enter your subscription URL.
 
 ```yaml
 proxy-providers:
@@ -254,7 +290,6 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
 ```
-Important: Do not commit configuration files containing real subscription links to public repositories. Use placeholders (e.g., YOUR_SUBSCRIPTION_URL) and replace them manually before use.
 
 📄 License
 This project is licensed under the MIT License. You are free to use, modify, and distribute this configuration, provided that the original copyright notice is retained.
