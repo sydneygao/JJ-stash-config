@@ -72,19 +72,19 @@ proxy-providers:
 
 # 出站策略组
 proxy-groups:
-  - {name: ✈️ 默认代理, type: select, proxies: [自动选择, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png'}
-  - {name: Google, type: select, proxies: [✈️ 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png'}
-  - {name: ChatGPT, type: select, proxies: [✈️ 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png'}
-  - {name: Apple, type: select, proxies: [DIRECT, ✈️ 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png'}
-  - {name: GitHub, type: select, proxies: [✈️ 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png'}
-  - {name: Social, type: select, proxies: [✈️ 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png'}
-  - {name: Microsoft, type: select, proxies: [DIRECT, ✈️ 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows.png'}
-  - {name: Games, type: select, proxies: [✈️ 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png'}
-  - {name: NETFLIX, type: select, proxies: [✈️ 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png'}
-  - {name: Spotify, type: select, proxies: [✈️ 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png'}
-  - {name: PayPal, type: select, proxies: [✈️ 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Paypal.png'}
-  - {name: Shield, type: select, proxies: [✈️ 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT, REJECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Lock.png'}
-  - {name: 漏网之鱼, type: select, proxies: [✈️ 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png'}
+  - {name: 默认代理, type: select, proxies: [自动选择, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png'}
+  - {name: Google, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png'}
+  - {name: ChatGPT, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png'}
+  - {name: Apple, type: select, proxies: [DIRECT, 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png'}
+  - {name: GitHub, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png'}
+  - {name: Social, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png'}
+  - {name: Microsoft, type: select, proxies: [DIRECT, 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows.png'}
+  - {name: Games, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png'}
+  - {name: NETFLIX, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png'}
+  - {name: Spotify, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png'}
+  - {name: PayPal, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Paypal.png'}
+  - {name: Shield, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT, REJECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Lock.png'}
+  - {name: 漏网之鱼, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png'}
   - {name: 自动选择, type: url-test, include-all: true, tolerance: 30, interval: 600, lazy: true, filter: "(?i)(?:香港|HK|HKG|Hong\\s*Kong|日本|JPN|JP|Japan|新加坡|SGP|SG|Singapore|美国|USA|US|United\\s*States)", icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Round_Robin.png'}
   - {name: 香港节点, type: url-test, include-all: true, tolerance: 30, interval: 600, lazy: true, filter: "(?i)(?:香港|HK|HKG|Hong\\s*Kong)", icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png'}
   - {name: 日本节点, type: url-test, include-all: true, tolerance: 30, interval: 600, lazy: true, filter: "(?i)(?:日本|JPN|JP|Japan)", icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png'}
@@ -130,12 +130,12 @@ rule-providers:
 
 # 规则匹配
 rules:
-  - DOMAIN-SUFFIX,overcast.fm,✈️ 默认代理
-  - DOMAIN-SUFFIX,overcast-cdn.com,✈️ 默认代理
+  - DOMAIN-SUFFIX,overcast.fm,默认代理
+  - DOMAIN-SUFFIX,overcast-cdn.com,默认代理
   - RULE-SET,cn_domain,DIRECT
   - RULE-SET,private_ip,DIRECT,no-resolve
   - RULE-SET,private_domain,DIRECT
-  - DOMAIN-SUFFIX,qichiyu.com,✈️ 默认代理
+  - DOMAIN-SUFFIX,qichiyu.com,默认代理
   - RULE-SET,ai,ChatGPT
   - RULE-SET,github_domain,GitHub
   # - RULE-SET,youtube_domain,Google
@@ -161,6 +161,6 @@ rules:
   - RULE-SET,apple_ip,Apple,no-resolve
   - RULE-SET,google_ip,Google,no-resolve
   - RULE-SET,netflix_ip,NETFLIX,no-resolve
-  - RULE-SET,geolocation-!cn,✈️ 默认代理
+  - RULE-SET,geolocation-!cn,默认代理
   - RULE-SET,cn_ip,DIRECT,no-resolve
   - MATCH,漏网之鱼
