@@ -25,12 +25,42 @@
 ### 导入配置
 
 1. **下载配置文件**：将本仓库中的 `config.yaml` 下载到你的 iOS 设备（可通过 iCloud Drive、AirDrop 等方式）
-2. **导入 Stash**：打开 Stash → 进入「配置」标签页 → 点击右上角「+」→ 选择「从文件导入」或「从 URL 下载」
+2. **导入 Stash**：打开 Stash → 进入「配置列表」标签页 → 选择「从文件导入」或「从 URL 下载」
 3. **启动代理**：返回主页，点击顶部「启动」按钮
 
-### 通过 URL 一键导入
+## 🔧 自定义机场订阅地址
 
-1. **推荐 ✅ 方法一：直接在 Safar 浏览器中打开以下链接快速导入：**
+本配置文件使用 `proxy-providers` 从远程订阅地址自动获取代理节点。你需要将自己的订阅链接填入配置文件中。
+
+方法一：「从文件导入」
+
+1. **下载`JJ-stash-config.yaml`，用记事本或其他编辑器打开，填写机场订阅地址并保存。**
+2. **在Stash中选择「从文件导入」将`JJ-stash-config.yaml`导入Stash。**
+
+具体:找到 `JJ-stash-config.yaml` 中的 `proxy-providers` 部分，将 `url` 字段的值替换为你的机场订阅链接：
+
+```yaml
+proxy-providers:
+  Airport1:
+    url: "机场订阅地址"       # 请替换为您的机场订阅地址
+    type: http
+    interval: 864100         #订阅定期更新时间（秒），不更新填写0
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+```
+
+方法二：「从 URL 下载」
+
+1. **在Stash中选择「从 URL 下载」，复制粘贴下面的🔗 配置下载地址，完成配置导入。**
+2. **在Stash中点击已导入的配置文件`JJ-stash-config`，选择「可视化编辑器」（创建副本防止配置更新覆盖机场订阅）**
+
+在`可视化编辑器`→`代理`→`远程代理集`→`Airport1`中填写你自己的机场订阅地址。
+
+### 🔗 配置下载地址
+
+1. **方法一：直接在 Safar 浏览器中打开以下链接快速导入：**
 
 **原始链接：**
 ```text
@@ -118,30 +148,6 @@ https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-stash-config.yaml
 - 低资源占用，适合 iOS 移动设备
 - 支持后台静默更新，无需重载 Stash
 - `domain` 和 `ipcidr` 类型匹配性能优秀，内存占用低
-
-## 🔧 自定义机场订阅地址
-
-本配置文件使用 `proxy-providers` 从远程订阅地址自动获取代理节点。你需要将自己的订阅链接填入配置文件中。
-
-1. **方法一：打开Stash app，点击已导入的配置文件「JJ-stash-config」，选择「编辑」。**
-
-找到 `JJ-config.yaml` 中的 `proxy-providers` 部分，将 `url` 字段的值替换为你的机场订阅链接：
-
-```yaml
-proxy-providers:
-  Airport1:
-    url: "机场订阅地址"       # 请替换为您的机场订阅地址
-    type: http
-    interval: 0              #订阅定期更新时间（秒），不更新填写0
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-```
-
-2. **✅ 推荐 方法二：打开Stash app，点击已导入的配置文件「JJ-stash-config」，选择「可视化编辑器」**
-
-在「可视化编辑器」➡️「代理」➡️「远程代理集」➡️「Airport1」中填写机场订阅地址。
 
 ## 📄 许可证
 
