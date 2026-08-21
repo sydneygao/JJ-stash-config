@@ -34,6 +34,10 @@
 
 <stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
 
+或在Stash app中选择「从URL下载」导入配置:
+
+填写 <https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
+
 ## 📁 配置文件说明
 
 本配置文件遵循 Stash / Clash 标准 YAML 语法，主要包含以下核心字段：
@@ -160,9 +164,13 @@ proxy-providers:
 
 ### One-Click Import via URL
 
-You can also quickly import by opening the following link in Safari:
+You can also quickly import the configuration by opening the following link directly in Safari:
 
-- 「Download from URL」: <stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
+<stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
+
+Alternatively, you can import the configuration in the Stash app by selecting **「Download from URL」** and entering the following address:
+
+<https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
 
 ## 📁 Configuration Structure
 
