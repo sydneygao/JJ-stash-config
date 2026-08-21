@@ -30,13 +30,17 @@
 
 ### 通过 URL 一键导入
 
-你也可以直接在 Safari 中打开以下链接快速导入：
+1. 你也可以直接在 Safari 中打开以下链接快速导入：
 
 <stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
 
-或在Stash app中选择「从URL下载」导入配置:
+国内加速：<stash://install-config?url=https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml>
 
-填写 <https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
+2. 或在Stash app中选择「从URL下载」导入配置:
+
+ <https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml>
+
+ 国内加速：<https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-config.yaml>
 
 ## 📁 配置文件说明
 
