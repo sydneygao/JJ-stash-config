@@ -3,8 +3,7 @@
 # Stash iOS 配置文件
 
 > 专为 iOS 平台优化的 Stash 代理配置文件，采用 YAML 格式编写，支持远程规则集自动更新与策略组智能分流。
-> 本配置文件不是适用于覆写，请填写机场订阅地址后直接使用。
-> 如用于覆写，请自行删除-proxy-providers代码段落。
+> ⚠️如用于覆写，请自行删除 `-proxy-providers` 代码段落。
 
 ## ✨ 功能特性
 
@@ -32,7 +31,7 @@
 
 本配置文件使用 `proxy-providers` 从远程订阅地址自动获取代理节点。你需要将自己的订阅链接填入配置文件中。
 
-方法一：「从文件导入」
+#### 方法一：「从文件导入」
 
 1. **下载`JJ-stash-config.yaml`，用记事本或其他编辑器打开，填写机场订阅地址并保存。**
 2. **在Stash中选择「从文件导入」将`JJ-stash-config.yaml`导入Stash。**
@@ -51,7 +50,7 @@ proxy-providers:
       interval: 300
 ```
 
-方法二：「从 URL 下载」
+#### 方法二：「从 URL 下载」
 
 1. **在Stash中选择「从 URL 下载」，复制粘贴下面的🔗 配置下载地址，完成配置导入。**
 2. **在Stash中点击已导入的配置文件`JJ-stash-config`，选择「可视化编辑器」（创建副本防止配置更新覆盖机场订阅）**
@@ -60,7 +59,7 @@ proxy-providers:
 
 ### 🔗 配置下载地址
 
-1. **方法一：直接在 Safar 浏览器中打开以下链接快速导入：**
+1. **直接在 Safar 浏览器中打开以下链接快速导入：**
 
 **原始链接：**
 ```text
@@ -72,7 +71,7 @@ stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-
 stash://install-config?url=https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-stash-config.yaml
 ```
 
-2. **方法二：在Stash app中选择「从URL下载」填写以下链接：**
+2. **在Stash app中选择「从URL下载」填写以下链接：**
 
  **原始链接：**
 ```text
@@ -148,6 +147,22 @@ https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-stash-config.yaml
 - 低资源占用，适合 iOS 移动设备
 - 支持后台静默更新，无需重载 Stash
 - `domain` 和 `ipcidr` 类型匹配性能优秀，内存占用低
+
+## 🧭 出站策略
+
+为了在保障网络连通性与速度的同时降低设备功耗，策略组采用以下设计：
+
+**区域固定线路：** 仅从机场节点中筛选出 香港、日本、美国、新加坡 四个主流地区的节点，分别创建对应的策略组（`🇭🇰 香港节点`、`🇯🇵 日本节点`、`🇺🇸 美国节点`、`🇸🇬 新加坡节点`）。所有区域组均开启 `include-all: true`，直接通过正则过滤全部节点，免去手动维护列表的负担。
+
+**自动选择策略：** `♻️ 自动选择` 组同样只对上述四个主流区域的节点进行测速选优，过滤范围与区域组一致，避免将冷门或低质量节点纳入测速，提升选择效率。
+
+**功耗与性能优化：**
+
+1. 所有 `url-test` 类型组均设置 `interval: 600`（每 10 分钟测速一次），避免频繁测速导致额外耗电。
+2. 启用 `lazy: true`，仅在节点被实际使用时才触发测速，进一步减少后台活动。
+3. 使用 `include-all: true` + 正则过滤，无需枚举节点名称，降低配置解析开销。
+
+**服务分流：** 针对常见服务（如 Google、ChatGPT、Netflix 等）单独设立策略组，默认走 🚀 默认代理，并支持手动切换至特定区域或直连。
 
 ## 📄 许可证
 
