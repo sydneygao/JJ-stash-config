@@ -122,7 +122,7 @@ rule-providers:
 # 分流规则
 rules:
   - DOMAIN-SUFFIX,unpkg.com,DIRECT
-  - DOMAIN,cdn.jsdelivr.net,DIRECT
+  - DOMAIN-SUFFIX,jsdelivr.net,DIRECT
   - DOMAIN-SUFFIX,xhscdn.com,DIRECT
   - DOMAIN-SUFFIX,clashmi.app,默认代理
   - DOMAIN-SUFFIX,overcast.fm,默认代理
