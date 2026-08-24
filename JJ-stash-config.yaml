@@ -29,14 +29,8 @@ dns:
 
   # 对部分域名使用单独的 DNS 服务器
   nameserver-policy:
-    'www.baidu.com':
-      - 114.114.114.114
-    '+.internal.crop.com':
-      - system
-    '+.proton.me':
-      - 1.1.1.1
-    'geosite:cn':
-      - 223.5.5.5
+    'www.baidu.com': 114.114.114.114
+    '+.proton.me': 1.1.1.1
 
   # 在以下列表的域名将不会被解析为 fake ip，这些域名相关的解析请求将会返回它们真实的 IP 地址
   fake-ip-filter:
