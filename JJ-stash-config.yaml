@@ -117,6 +117,7 @@ rule-providers:
   google_ip: {behavior: ipcidr, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs", path: ./rules/google_ip.mrs, interval: 86400}
   telegram_ip: {behavior: ipcidr, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs", path: ./rules/telegram_ip.mrs, interval: 86400}
   netflix_ip: {behavior: ipcidr, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs", path: ./rules/netflix_ip.mrs, interval: 86400}
+  twitter_ip: {behavior: ipcidr, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/twitter.mrs", path: ./rules/twitter_ip.mrs, interval: 86400}
   apple_ip: {behavior: ipcidr, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/apple.mrs", path: ./rules/apple_ip.mrs, interval: 86400}
 
 # 分流规则
@@ -153,6 +154,7 @@ rules:
   - DOMAIN-SUFFIX,marketingcloudapis.com,Games
   - RULE-SET,paypal_domain,PayPal
   - RULE-SET,telegram_ip,Social,no-resolve
+  - RULE-SET,twitter_ip,Social,no-resolve
   - RULE-SET,apple_ip,Apple,no-resolve
   - RULE-SET,google_ip,Google,no-resolve
   - RULE-SET,netflix_ip,NETFLIX,no-resolve
