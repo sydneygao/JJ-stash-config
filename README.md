@@ -3,7 +3,7 @@
 
 ### 🔗 Configuration Download Links
 
-#### Quickly import by opening the following link in Safari:
+#### Quickly import by opening the following link in 🖥Safari:
 **Original link:**
 ```text
 stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-stash-config.yaml
