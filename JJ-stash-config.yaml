@@ -71,7 +71,7 @@ proxy-providers:
 proxy-groups:
   - {name: 默认代理, type: select, proxies: [香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png'}
   - {name: Google, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png'}
-  - {name: ChatGPT, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png'}
+  - {name: Ai, type: select, proxies: [美国节点, 默认代理, 香港节点, 日本节点, 新加坡节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png'}
   - {name: Apple, type: select, proxies: [DIRECT, 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png'}
   - {name: GitHub, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png'}
   - {name: Social, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png'}
@@ -92,7 +92,7 @@ proxy-groups:
 # Rule Providers
 rule-providers:
   private_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs", path: ./rules/private_domain.mrs, interval: 86400}
-  ai: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs", path: ./rules/ai.mrs, interval: 86400}
+  ai_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs", path: ./rules/ai.mrs, interval: 86400}
   youtube_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs", path: ./rules/youtube.mrs, interval: 86400}
   google_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs", path: ./rules/google.mrs, interval: 86400}
   github_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs", path: ./rules/github.mrs, interval: 86400}
@@ -132,7 +132,9 @@ rules:
   - RULE-SET,cn_domain,DIRECT
   - RULE-SET,private_domain,DIRECT
   - RULE-SET,private_ip,DIRECT,no-resolve
-  - RULE-SET,ai,ChatGPT
+  - RULE-SET,ai_domain,Ai
+  - DOMAIN-SUFFIX,searchgpt.com,Ai # ChatGPT
+  - IP-ASN,399358,Ai,no-resolve # Claude
   - RULE-SET,github_domain,GitHub
 # - RULE-SET,youtube_domain,Google
   - RULE-SET,google_domain,Google
