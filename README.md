@@ -1,9 +1,8 @@
 # JJ-stash-config
-## Stash iOS Configuration Files
+## Stash iOS Config File
 
-### 🔗 Configuration Download Links
-
-#### Quickly import by opening the following link in 🖥Safari:
+### 🔗 Step 1. 导入配置文件
+#### 通过🖥Safari浏览器，快速导入:
 **Original link:**
 ```text
 stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-stash-config.yaml
@@ -13,7 +12,7 @@ stash://install-config?url=https://raw.githubusercontent.com/sydneygao/JJ-stash-
 stash://install-config?url=https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-stash-config.yaml
 ```
 
-#### Import in the Stash app by selecting "Download from URL" and entering the following link:
+#### 或在Stash首页左上角，点击进入配置列表,导入-从URL下载，填写以下链接。
 **Original link:**
 ```text
 https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-stash-config.yaml
@@ -22,9 +21,6 @@ https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-stash-config
 ```text
 https://cdn.jsdelivr.net/gh/sydneygao/JJ-stash-config@main/JJ-stash-config.yaml
 ```
-### ✈️ Add your airport subscription
-1. In Stash, tap the imported configuration file `JJ-stash-config` and select **Visualization Editor**.
-2. In Visualization Editor → Proxy - Proxy Provider → `Airport1`, fill in your own **airport subscription URL**.
+### ✈️ Step 2. 填写机场订阅
+在Stash首页左上角，点击进入配置列表, 找到已导入的 `JJ-openclash-config.yaml`，编辑（可视化编辑器）-远程代理集，添加机场订阅。
 
-### 🤝 Contributing
-Issues and Pull Requests are welcome to help improve this configuration!
