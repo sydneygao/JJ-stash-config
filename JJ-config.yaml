@@ -66,7 +66,7 @@ proxy-providers:
     url: "https://"   #替换为机场订阅地址
     interval: 43200
     path: ./providers/Airport1.yaml
-    filter: '^(?!(?:.*流量.*|.*时间.*|.*到期.*)).*$'   # 排除包含“流量”、“时间”、“到期”的节点
+    filter: 'null'   # 排除包含“流量”、“时间”、“到期”的节点
 
 # 策略组
 proxy-groups:
