@@ -93,9 +93,7 @@ proxy-groups:
 rule-providers:
   private_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs", path: ./rules/private_domain.mrs, interval: 86400}
   ai_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs", path: ./rules/ai.mrs, interval: 86400}
-  youtube_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs", path: ./rules/youtube.mrs, interval: 86400}
   google_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs", path: ./rules/google.mrs, interval: 86400}
-  github_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs", path: ./rules/github.mrs, interval: 86400}
   spotify_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs", path: ./rules/spotify.mrs, interval: 86400}
   telegram_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs", path: ./rules/telegram.mrs, interval: 86400}
   netflix_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs", path: ./rules/netflix.mrs, interval: 86400}
@@ -122,7 +120,12 @@ rule-providers:
 
 # 分流规则
 rules:
+  # 内网域名
+  - RULE-SET,private_domain,DIRECT
+  - RULE-SET,private_ip,DIRECT,no-resolve
+  
   # 自定义前置规则
+  - DOMAIN-SUFFIX,ztna-dingtalk.com,DIRECT
   - DOMAIN-SUFFIX,unpkg.com,DIRECT
   - DOMAIN-SUFFIX,jsdelivr.net,DIRECT
   - DOMAIN-SUFFIX,xhscdn.com,DIRECT
@@ -130,9 +133,6 @@ rules:
   - DOMAIN-SUFFIX,overcast.fm,默认代理
   - DOMAIN-SUFFIX,overcast-cdn.com,默认代理
   - DOMAIN-SUFFIX,jpush.cn,默认代理
-  - RULE-SET,cn_domain,DIRECT
-  - RULE-SET,private_domain,DIRECT
-  - RULE-SET,private_ip,DIRECT,no-resolve
 
   # AI：MetaCubeX 主规则 + 四源验证后的精确补充
   - RULE-SET,ai_domain,Ai
@@ -145,9 +145,7 @@ rules:
   - DOMAIN-SUFFIX,copilot.microsoft.com,Ai
   - DOMAIN-SUFFIX,copilotstudio.microsoft.com,Ai
   - DOMAIN,m365.cloud.microsoft,Ai
-
   - RULE-SET,github_domain,GitHub
-# - RULE-SET,youtube_domain,Google
   - RULE-SET,google_domain,Google
   - RULE-SET,whatsapp_domain,Social
   - RULE-SET,instagram_domain,Social
@@ -166,6 +164,9 @@ rules:
   - DOMAIN-SUFFIX,2ksports.com,Games
   - DOMAIN-SUFFIX,marketingcloudapis.com,Games
   - RULE-SET,paypal_domain,PayPal
+
+  # 国内域名
+  - RULE-SET,cn_domain,DIRECT
 
   # IP规则后置
   - RULE-SET,telegram_ip,Social,no-resolve
