@@ -73,7 +73,6 @@ proxy-groups:
   - {name: Google, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png'}
   - {name: Ai, type: select, proxies: [美国节点, 默认代理, 香港节点, 日本节点, 新加坡节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png'}
   - {name: Apple, type: select, proxies: [DIRECT, 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png'}
-  - {name: GitHub, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png'}
   - {name: Social, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png'}
   - {name: Microsoft, type: select, proxies: [DIRECT, 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows.png'}
   - {name: Games, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png'}
@@ -133,7 +132,8 @@ rules:
   - DOMAIN-SUFFIX,overcast.fm,默认代理
   - DOMAIN-SUFFIX,overcast-cdn.com,默认代理
   - DOMAIN-SUFFIX,jpush.cn,默认代理
-
+  - RULE-SET,github_domain,默认代理
+  
   # AI：MetaCubeX 主规则 + 四源验证后的精确补充
   - RULE-SET,ai_domain,Ai
   - DOMAIN-SUFFIX,searchgpt.com,Ai
@@ -145,7 +145,6 @@ rules:
   - DOMAIN-SUFFIX,copilot.microsoft.com,Ai
   - DOMAIN-SUFFIX,copilotstudio.microsoft.com,Ai
   - DOMAIN,m365.cloud.microsoft,Ai
-  - RULE-SET,github_domain,GitHub
   - RULE-SET,google_domain,Google
   - RULE-SET,whatsapp_domain,Social
   - RULE-SET,instagram_domain,Social
