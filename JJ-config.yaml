@@ -186,7 +186,7 @@ rules:
   # Meta Facebook / Instagram / WhatsApp
   - IP-ASN,32934,Social,no-resolve
   # GitHub
-  - IP-ASN,36459,GitHub,no-resolve
+  - IP-ASN,36459,默认代理,no-resolve
   # PayPal
   - IP-ASN,1449,PayPal,no-resolve
   - IP-ASN,17012,PayPal,no-resolve
