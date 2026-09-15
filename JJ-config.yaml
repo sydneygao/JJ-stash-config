@@ -76,24 +76,24 @@ proxy-providers:
 
 # 策略组
 proxy-groups:
-  - {name: 默认代理, type: select, proxies: [香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png'}
-  - {name: Google, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png'}
-  - {name: Ai, type: select, proxies: [美国节点, 默认代理, 香港节点, 日本节点, 新加坡节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png'}
-  - {name: Apple, type: select, proxies: [DIRECT, 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png'}
-  - {name: Social, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png'}
-  - {name: Microsoft, type: select, proxies: [DIRECT, 默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows.png'}
-  - {name: Games, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png'}
-  - {name: NETFLIX, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png'}
-  - {name: Spotify, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png'}
-  - {name: PayPal, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Paypal.png'}
-  - {name: Shield, type: select, proxies: [默认代理, REJECT, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Lock.png'}
-  - {name: 漏网之鱼, type: select, proxies: [默认代理, 香港节点, 日本节点, 新加坡节点, 美国节点, 自动选择, 手动选择, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png'}
-  - {name: 香港节点, type: url-test, use: [Airport1], filter: '(?i)(?:香港|HKG|HK|Hong[\s_-]*Kong)', tolerance: 20, interval: 600, lazy: true, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png'}
-  - {name: 日本节点, type: url-test, use: [Airport1], filter: '(?i)(?:日本|日|JP|JPN|Japan)', tolerance: 20, interval: 600, lazy: true, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png'}
-  - {name: 新加坡节点, type: url-test, use: [Airport1], filter: '(?i)(?:新加坡|新|SG|SGP|Singapore)', tolerance: 20, interval: 600, lazy: true, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png'}
-  - {name: 美国节点, type: url-test, use: [Airport1], filter: '(?i)(?:美国|美|US|USA|United\\s*States|UnitedStates)', tolerance: 20, interval: 600, lazy: true, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png'}
-  - {name: 自动选择, type: url-test, use: [Airport1], filter: '(?i)(?:香港|港|HK|HKG|Hong\\s*Kong|HongKong|日本|日|JP|JPN|Japan|新加坡|新|SG|SGP|Singapore|美国|美|US|USA|United\\s*States|UnitedStates)', tolerance: 30, interval: 600, lazy: true, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Round_Robin.png'}
-  - {name: 手动选择, type: select, use: [Airport1], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png'}
+  - {name: 默认代理, type: fallback, proxies: [香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点]}
+  - {name: Google, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
+  - {name: Ai, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
+  - {name: Apple, type: select, proxies: [DIRECT, 默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择]}
+  - {name: Social, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
+  - {name: Microsoft, type: select, proxies: [DIRECT, 默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择]}
+  - {name: Games, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
+  - {name: NETFLIX, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
+  - {name: Spotify, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT}
+  - {name: PayPal, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
+  - {name: Shield, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT, REJECT]}
+  - {name: 漏网之鱼, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
+  - {name: 香港节点, type: url-test, use: [Airport1], filter: '(?i)(?:香港|HKG|HK|Hong[\s_-]*Kong)', tolerance: 20, interval: 600, lazy: true}
+  - {name: 日本节点, type: url-test, use: [Airport1], filter: '(?i)(?:日本|日|JP|JPN|Japan)', tolerance: 20, interval: 600, lazy: true}
+  - {name: 新加坡节点, type: url-test, use: [Airport1], filter: '(?i)(?:新加坡|新|SG|SGP|Singapore)', tolerance: 20, interval: 600, lazy: true}
+  - {name: 台湾节点, type: url-test, use: [Airport1], filter: '(?i)(?:台湾|台灣|🇹🇼|\bTW\b|\bTWN\b|Taiwan|Taipei|TPE)', tolerance: 20, interval: 600, lazy: true}
+  - {name: 美国节点, type: url-test, use: [Airport1], filter: '(?i)(?:美国|美|US|USA|United\\s*States|UnitedStates)', tolerance: 20, interval: 600, lazy: true}
+  - {name: 手动选择, type: select, use: [Airport1]}
 
 # Rule Providers
 rule-providers:
