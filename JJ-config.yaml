@@ -84,7 +84,7 @@ proxy-groups:
   - {name: Microsoft, type: select, proxies: [DIRECT, 默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择]}
   - {name: Games, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
   - {name: NETFLIX, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
-  - {name: Spotify, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT}
+  - {name: Spotify, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
   - {name: PayPal, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
   - {name: Shield, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT, REJECT]}
   - {name: 漏网之鱼, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
