@@ -1,6 +1,7 @@
-# Stash配置文件，适用iOS使用环境
-# 根据Stash官方配置规则进行编写
-# 更新日期：2026-09-14
+# iOS Stash配置文件
+# 依据官方规则编制 参考 https://stash.wiki
+# 更新日期：2026-09-15
+# 配置下载地址：https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml
 
 # 规则模式：rule（规则） global（全局代理） direct（全局直连）
 mode: rule
