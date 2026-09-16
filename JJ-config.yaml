@@ -139,6 +139,8 @@ rules:
   - DOMAIN,cdn.openaimerge.com,Ai
   - DOMAIN-SUFFIX,gemini.googleusercontent.com,Ai
   - DOMAIN-SUFFIX,copilotstudio.microsoft.com,Ai
+  - DOMAIN-SUFFIX,muse.ai,Ai
+  - DOMAIN-SUFFIX,skiv.com,Ai
  
   - RULE-SET,apple_domain,Apple
   - RULE-SET,microsoft_domain,Microsoft
