@@ -113,6 +113,7 @@ rule-providers:
   microsoft_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs", path: ./rules/microsoft.mrs, interval: 86400}
   apple_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs", path: ./rules/apple.mrs, interval: 86400}
   porn_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-porn.mrs", path: ./rules/porn.mrs, interval: 86400}
+  steam@cn_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam@cn.mrs", path: ./rules/steam@cn.mrs, interval: 86400}
   games_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-games-!cn.mrs", path: ./rules/games.mrs, interval: 86400}
   github_domain: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs", path: ./rules/github.mrs, interval: 86400}
   geolocation-!cn: {behavior: domain, format: mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs", path: ./rules/geolocation-!cn.mrs, interval: 86400}
@@ -160,7 +161,8 @@ rules:
   - RULE-SET,porn_domain,Shield
   - DOMAIN-SUFFIX,91porn.com,Shield
   - RULE-SET,netflix_domain,NETFLIX
-  - RULE-SET,games_domain,Games
+  - RULE-SET,steam@cn_domain,DIRECT
+  - RULE-SET,games_domain,Games  
   - RULE-SET,paypal_domain,PayPal
 
   # 国内域名
