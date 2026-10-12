@@ -28,11 +28,6 @@ dns:
   # - https://dns.alidns.com/dns-query
   # - system # 使用系统 DNS
   
-  # 解析机场代理的DNS
-  proxy-server-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-
   # 在以下列表的域名将不会被解析为 fake ip，这些域名相关的解析请求将会返回它们真实的 IP 地址
   fake-ip-filter:
     - '+.lan'
