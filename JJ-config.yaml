@@ -62,11 +62,11 @@ dns:
     - '*.msftconnecttest.com'
 
 # 远程代理集
-proxy-providers:
-  Airport1:
-    url: "https://"
-    interval: 43200
-    path: ./providers/Airport1.yaml
+#proxy-providers:
+#  Airport1:
+#    url: "https://"
+#    interval: 43200
+#    path: ./providers/Airport1.yaml
 
 # 策略组
 proxy-groups:
