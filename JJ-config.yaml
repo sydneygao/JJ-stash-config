@@ -1,6 +1,6 @@
 # iOS Stash配置文件
 # 依据官方规则编制 参考 https://stash.wiki
-# 更新日期：2026-09-15
+# 更新日期：2026-11-16
 # 配置下载地址：https://raw.githubusercontent.com/sydneygao/JJ-stash-config/main/JJ-config.yaml
 
 # 规则模式：rule（规则） global（全局代理） direct（全局直连）
@@ -61,33 +61,95 @@ dns:
     - '*.msftncsi.com'
     - '*.msftconnecttest.com'
 
-# 远程代理集
-#proxy-providers:
-#  Airport1:
-#    url: "https://"
-#    interval: 43200
-#    path: ./providers/Airport1.yaml
-
 # 策略组
 proxy-groups:
-  - {name: 默认代理, type: fallback, proxies: [香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点]}
-  - {name: Google, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
-  - {name: Ai, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
-  - {name: Apple, type: select, proxies: [DIRECT, 默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择]}
-  - {name: Social, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
-  - {name: Microsoft, type: select, proxies: [DIRECT, 默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择]}
-  - {name: Games, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
-  - {name: NETFLIX, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
-  - {name: Spotify, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
-  - {name: PayPal, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
-  - {name: Shield, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT, REJECT]}
-  - {name: 漏网之鱼, type: select, proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]}
-  - {name: 香港节点, type: url-test, use: [Airport1], filter: '(?i)(?:香港|HKG|HK|Hong[\s_-]*Kong)', tolerance: 20, interval: 600, lazy: true}
-  - {name: 日本节点, type: url-test, use: [Airport1], filter: '(?i)(?:日本|日|JP|JPN|Japan)', tolerance: 20, interval: 600, lazy: true}
-  - {name: 新加坡节点, type: url-test, use: [Airport1], filter: '(?i)(?:新加坡|新|SG|SGP|Singapore)', tolerance: 20, interval: 600, lazy: true}
-  - {name: 台湾节点, type: url-test, use: [Airport1], filter: '(?i)(?:台湾|台灣|🇹🇼|\bTW\b|\bTWN\b|Taiwan|Taipei|TPE)', tolerance: 20, interval: 600, lazy: true}
-  - {name: 美国节点, type: url-test, use: [Airport1], filter: '(?i)(?:美国|美|US|USA|United\\s*States|UnitedStates)', tolerance: 20, interval: 600, lazy: true}
-  - {name: 手动选择, type: select, use: [Airport1]}
+  # 核心自动选择
+  - name: 默认代理
+    type: fallback
+    proxies: [香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点]
+    interval: 600
+    tolerance: 50
+    lazy: true
+
+  # 功能分组
+  - name: Google
+    type: select
+    proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]
+  - name: Ai
+    type: select
+    proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]
+  - name: Apple
+    type: select
+    proxies: [DIRECT, 默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择]
+  - name: Social
+    type: select
+    proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]
+  - name: Microsoft
+    type: select
+    proxies: [DIRECT, 默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择]
+  - name: Games
+    type: select
+    proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]
+  - name: NETFLIX
+    type: select
+    proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]
+  - name: Spotify
+    type: select
+    proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]
+  - name: PayPal
+    type: select
+    proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]
+  - name: Shield
+    type: select
+    proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT, REJECT]
+  - name: 漏网之鱼
+    type: select
+    proxies: [默认代理, 香港节点, 台湾节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT]
+
+  # 区域自动选择（include-all 自动包含所有远程订阅）
+  - name: 香港节点
+    type: url-test
+    include-all: true
+    filter: '(?i)(?:香港|HKG|HK|Hong[\s_-]*Kong)'
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 20
+    lazy: true
+  - name: 日本节点
+    type: url-test
+    include-all: true
+    filter: '(?i)(?:日本|日|JP|JPN|Japan)'
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 20
+    lazy: true
+  - name: 新加坡节点
+    type: url-test
+    include-all: true
+    filter: '(?i)(?:新加坡|新|SG|SGP|Singapore)'
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 20
+    lazy: true
+  - name: 台湾节点
+    type: url-test
+    include-all: true
+    filter: '(?i)(?:台湾|台灣|🇹🇼|\bTW\b|\bTWN\b|Taiwan|Taipei|TPE)'
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 20
+    lazy: true
+  - name: 美国节点
+    type: url-test
+    include-all: true
+    filter: '(?i)(?:美国|美|US|USA|United\s*States|UnitedStates)'
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 20
+    lazy: true
+  - name: 手动选择
+    type: select
+    include-all: true
 
 # Rule Providers
 rule-providers:
